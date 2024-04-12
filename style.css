@@ -1,59 +1,54 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: url(https://images.unsplash.com/photo-1665041982909-8a86864a1e49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  #wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #game {
-    position: relative;
-    display: inline-grid;
-    background: black;
-  }
-  
-  /*.game-status {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    border: 5px darkblue solid;
-    background: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-  }
-  */   
-  #score {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    border: 5px darkblue solid;
-    background: black;
-    margin-top: 20px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-  }
-  
-  #start-button {
-    margin-top: 20px;
-  }
-  
+body {
+    background-color: #73c8a9;
+    font-family: 'Press Start 2P', cursive;
+    background-image: linear-gradient(to right, #ffeb7a, #665e36);
+}
 
-  
+canvas {
+    border: 5px solid #2e2e2e;
+    border-radius: 10px;
+    display: block;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('assets/FlappyBirdBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* customize blur just to see how blurry it gets after javascript. */
+.backdrop-blur {
+    filter: blur(?px);
+}
+
+/* work in process, it works but check back again after finished javascript */
+#end-menu {
+    display: none;
+    margin: 50px auto;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+}
+
+#score-display {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* also work after javascript look at ws3 school for more info
+button {
+
+}
+
+button:hover {
+
+}
