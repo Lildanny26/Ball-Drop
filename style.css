@@ -1,54 +1,42 @@
 body {
     background-color: #73c8a9;
     font-family: 'Press Start 2P', cursive;
-    background-image: linear-gradient(to right, #ffeb7a, #665e36);
-}
-
-canvas {
+    background-image: linear-gradient(to right, #6ee0e0, #296e6e);
     border: 5px solid #2e2e2e;
     border-radius: 10px;
     display: block;
     margin: 50px auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: url('assets/FlappyBirdBackground.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
 }
-
-/* customize blur just to see how blurry it gets after javascript. */
-.backdrop-blur {
-    filter: blur(?px);
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
 }
-
-/* work in process, it works but check back again after finished javascript */
-#end-menu {
-    display: none;
-    margin: 50px auto;
-    width: 200px;
-    padding: 20px;
-    text-align: center;
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(99, 243, 253);
+    border-radius: 50%;
+    position: relative;
+    top: 400px;
+    left: 190px;
+    z-index: 1000000;
+}
+.block{
+    width: 400px;
+    height: 20px;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+.hole{
+    width: 40px;
+    height: 20px;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    z-index: 1000;
-}
-
-#score-display {
-    color: #fff;
-    font-size: 2em;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* also work after javascript look at ws3 school for more info
-button {
-
-}
-
-button:hover {
-
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
 }
