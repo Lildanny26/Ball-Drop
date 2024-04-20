@@ -1,8 +1,8 @@
-# Daniel-Davila-Martinez-Milestone-1
+# Ball-Drop-Game
 
 ## Description
 
-- Ball Drop Game is just like an elevator game that includes the ball droping down which has to go through small empty spaces to continue the game. You have unlimtited time to play, once you get squished the game will stop. 
+- Ball Drop Game is just like an elevator game that includes the ball dropping down which has to go through small empty spaces to continue the game. You have limited time to play, once you get squished the game will end. 
 
 
 ## Deployment
@@ -11,14 +11,12 @@
 
 ## Game Logic
 
-- Instructions: Please read the instructions before playing. Basically using your left and right arrow keys. There infinit levels try to make it as far as you can before getting squished. 
+- Instructions: Use your left and right arrow keys. There are infinite levels, try to make it as far as you can before getting squished ball the wall. 
 
-- Disclaimer: This is simply for school project amd educational purposes, not intended for profit of any kind. 
-- Any questions or concerns, feel free to reach out.
 - Daniel Davila-Martinez - 2024
 
 ## Post M-V-P Plans 
 
 - Make difficult levels 
-- Make the speed start from low speed to exceedd into high speed
+- Make the speed start from low speed to exceed into high speed
 - Add a point chart on top of the screen 
