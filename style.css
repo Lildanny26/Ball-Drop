@@ -1,8 +1,7 @@
 body {
-    background-color: #73c8a9;
+    background-color: #faf8f8;
     font-family: 'Press Start 2P', cursive;
-    background-image: linear-gradient(to right, #6ee0e0, #296e6e);
-    border: 5px solid #2e2e2e;
+    border: 5px solid #000000;
     border-radius: 10px;
     display: block;
     margin: 50px auto;
@@ -11,10 +10,11 @@ body {
 
 #instructions {
     margin-bottom: 20px;
+    color:#000000;
 }
 
 #startButton {
-    background-color: #4CAF50;
+    background-color: #ff188b;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -26,25 +26,25 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 12px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #ff188b;
 }
 
 #startButton:hover {
     background-color: white;
-    color: #4CAF50;
+    color: #ff188b;
 }
 
 #game{
     width: 400px;
     height: 500px;
-    border: 3px solid black;
+    border: 3px solid #000000;
     margin: auto;
     overflow: hidden;
 }
 #character{
     width: 20px;
     height: 20px;
-    background-color: rgb(99, 243, 253);
+    background-color: #ff188b;
     border-radius: 50%;
     position: relative;
     top: 400px;
@@ -62,8 +62,12 @@ body {
 .hole{
     width: 40px;
     height: 20px;
-    background-color: white;
+    background-color: #faf8f8;
     position: relative;
     top: 100px;
     margin-top: -20px;
+}
+
+p{
+    color:#000000
 }

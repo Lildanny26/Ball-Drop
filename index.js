@@ -1,3 +1,4 @@
+// Get references to the character, game container, start button, instructions, and other necessary variables
 let character = document.getElementById("character");
 let game = document.getElementById("game");
 let startButton = document.getElementById("startButton");
@@ -7,32 +8,39 @@ let both = 0;
 let counter = 0;
 let currentBlocks = [];
 
+// Add event listener to start button
 startButton.addEventListener("click", startCountdown);
 
+// Function to handle countdown before starting the game
 function startCountdown() {
-    startButton.style.display = "none";
+    startButton.style.display = "none"; // Hide the start button
 
-    let countdown = 3; 
-    let countdownDisplay = document.createElement("div");
-    countdownDisplay.setAttribute("id", "countdown");
-    countdownDisplay.textContent = countdown;
-    document.body.appendChild(countdownDisplay);
+    let countdown = 3; // Set initial countdown value
+    let countdownDisplay = document.createElement("div"); // Create a countdown display element
+    countdownDisplay.setAttribute("id", "countdown"); // Set its ID
+    countdownDisplay.textContent = countdown; // Set initial countdown text
+    document.body.appendChild(countdownDisplay); // Append countdown display to the document body
 
+    // Countdown interval to update countdown display
     let countdownInterval = setInterval(() => {
-        if (countdown === 0) {
-            clearInterval(countdownInterval);
-            document.body.removeChild(countdownDisplay);
-            startGame(); 
+        if (countdown === 0) { // If countdown reaches zero
+            clearInterval(countdownInterval); // Clear the countdown interval
+            document.body.removeChild(countdownDisplay); // Remove the countdown display
+            startGame(); // Start the game
         } else {
-            countdown--;
-            countdownDisplay.textContent = countdown;
+            countdown--; // Decrease countdown value
+            countdownDisplay.textContent = countdown; // Update countdown display
         }
-    }, 1000); 
+    }, 1000); // Run every second
 }
 
+// Function to start the game
 function startGame() {
-    instructions.style.display = "block"; 
+    instructions.style.display = "block"; // Display game instructions
+    let backgroundMusic = document.getElementById("backgroundMusic"); // Get reference to background music element
+    backgroundMusic.play(); // Play background music
 
+    // Event listeners to handle character movement
     document.addEventListener("keydown", event => {
         if (both == 0) {
             both++;
@@ -49,6 +57,7 @@ function startGame() {
         both = 0;
     });
 
+    // Function to create and move blocks in the game
     let blocks = setInterval(function () {
         let blockLast = document.getElementById("block" + (counter - 1));
         let holeLast = document.getElementById("hole" + (counter - 1));
@@ -78,8 +87,9 @@ function startGame() {
         let characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
         let drop = 0;
         if (characterTop <= 0) {
-            alert("Game over. Score: " + (counter - 9));
             clearInterval(blocks);
+            backgroundMusic.pause();
+            alert("Game over. Score: " + (counter - 9));
             location.reload();
         }
         for (let i = 0; i < currentBlocks.length; i++) {
@@ -112,6 +122,7 @@ function startGame() {
     }, 1);
 }
 
+// Function to move character left
 function moveLeft() {
     let left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     if (left > 0) {
@@ -119,6 +130,7 @@ function moveLeft() {
     }
 }
 
+// Function to move character right
 function moveRight() {
     let left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     if (left < 380) {
